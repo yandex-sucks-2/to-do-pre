@@ -1,4 +1,4 @@
-let items = [
+const items = [
     "Сделать проектную работу",
     "Полить цветы",
     "Пройти туториал по Реакту",
@@ -69,9 +69,9 @@ function createItem(item) {
     return itemElement;
 }
 
-items = loadTasks();
+const curItems = loadTasks();
 
-items.forEach((task) => {
+curItems.forEach((task) => {
     const itemElement = createItem(task);
     listElement.append(itemElement);
 });
@@ -90,4 +90,3 @@ formElement.addEventListener("submit", (evt) => {
 
     saveTasks(getTasksFromDOM());
 });
-
